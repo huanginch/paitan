@@ -1,0 +1,6 @@
+h2::before {
+  content: attr(data-text);
+  position: absolute;
+  z-index: -1;
+  -webkit-text-stroke: 10px #ffff;
+}

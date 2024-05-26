@@ -1,0 +1,40 @@
+h1::before {
+  content: '麵音白湯 MenonPaitan';
+  position: absolute;
+  z-index: -1;
+  -webkit-text-stroke: 5px #FFBE17;
+}
+
+h1:hover::before {
+  z-index: -1;
+  -webkit-text-stroke: 5px #FFFF;
+}
+
+h1:focus::before {
+  z-index: -1;
+  -webkit-text-stroke: 5px #FFFF;
+}
+
+.logo:hover {
+  transition: all 0.3s linear;
+  h1 {
+    color: #FFBE17;
+  }
+  h1::before {
+    z-index: -1;
+    -webkit-text-stroke: 5px #FFFF;
+  }
+}
+
+.logo:focus {
+  transition: all 0.3s linear;
+
+  h1 {
+    color: #FFBE17;
+  }
+
+  h1::before {
+    z-index: -1;
+    -webkit-text-stroke: 5px #FFFF;
+  }
+}

@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: GenJyuuGothic;
+    font-weight: 700;
+    src: url(/src/fonts/GenJyuuGothic-Bold_.ttf);
+  }
+  .font-outline-3 {
+    -webkit-text-stroke: 3px #FFBE17;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: GenJyuuGothic, sans-serif;
+}
+
+/* scroll bar style */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFBE17;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #634700;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}

@@ -1,0 +1,14 @@
+h3::before {
+  content: attr(data-text);
+  position: absolute;
+  z-index: -1;
+  -webkit-text-stroke: 10px #ffff;
+
+  @media (max-width: 992px) {
+      -webkit-text-stroke: 7px #ffff;
+    }
+
+  @media (max-width: 768px){
+    -webkit-text-stroke: 5px #ffff;
+  }
+}

@@ -1,0 +1,21 @@
+footer span:hover {
+  transition: all 0.3s;
+  opacity: 0.5;
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    z-index: -1;
+    -webkit-text-stroke: 5px #fff;
+    transition: all 0.3s;
+  }
+}
+
+
+
+footer span:active, footer span:focus{
+  color: #fff;
+  opacity: 1;
+  &::before {
+      -webkit-text-stroke: 5px #7B5900;
+    }
+}

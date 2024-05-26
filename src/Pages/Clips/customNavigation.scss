@@ -1,0 +1,127 @@
+.swiper-button-next {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 60%;
+  right: 5%;
+  z-index: 10;
+  transform: translateY(-50%);
+  background: #FCD36B;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 5px solid #FCD36B;
+  transition: all 0.3s;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    right: -2%;
+    border: 2px solid #FCD36B;
+  }
+
+  &:hover {
+    background: white;
+    border: 5px solid #FFB800;
+
+    @media (max-width: 768px) {
+      border: 2px solid #FFB800;
+    }
+
+    &:after {
+      content: url("/src/assets/next-pc-hover.svg");
+
+      @media (max-width: 768px) {
+        content: url("/src/assets/next-hover.svg");
+      }
+    } 
+  }
+
+  &:active {
+    background: #FFB800;
+    border: 2px solid #FFB800;
+
+    &:after {
+      content: url("/src/assets/next-pc.svg");
+
+      @media (max-width: 768px) {
+        content: url("/src/assets/next.svg");
+      }
+    }
+  }
+}
+
+.swiper-button-next:after {
+  content: url("/src/assets/next-pc.svg");
+  padding-left: 2px;
+
+  @media (max-width: 768px) {
+    content: url("/src/assets/next.svg");
+    margin-bottom: 15px;
+  }
+}
+
+.swiper-button-prev {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  z-index: 10;
+  transform: translateY(-50%);
+  background: #FCD36B;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 5px solid #FCD36B;
+  transition: all 0.3s;
+
+  @media (max-width: 768px){
+    width: 40px;
+    height: 40px;
+    left: -2%;
+    border: 2px solid #FCD36B;
+  }
+
+  &:hover {
+      background: white;
+      border: 5px solid #FFB800;
+
+      @media (max-width: 768px) {
+        border: 2px solid #FFB800;
+      }
+  
+      &:after {
+        content: url("/src/assets/prev-pc-hover.svg");
+  
+        @media (max-width: 768px) {
+          content: url("/src/assets/prev-hover.svg");
+        }
+      }
+    }
+  
+    &:active {
+      background: #FFB800;
+      border: 2px solid #FFB800;
+
+      &:after {
+        content: url("/src/assets/prev-pc.svg");
+  
+        @media (max-width: 768px) {
+          content: url("/src/assets/prev.svg");
+        }
+      }
+    }
+}
+
+.swiper-button-prev::after {
+  content: url("/src/assets/prev-pc.svg");
+  padding-right: 2px;
+
+  @media (max-width: 768px) {
+    content: url("/src/assets/prev.svg");
+    margin-bottom: 15px;
+  }
+}

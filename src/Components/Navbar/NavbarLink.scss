@@ -1,0 +1,12 @@
+.navbarlink:hover, .navbarlink:active {
+
+  @media (max-width: 768px) {
+    opacity: 0.5;
+    &:before {
+      content: attr(data-text);
+      position: absolute;
+      z-index: -1;
+      -webkit-text-stroke: 5px #fff;
+    }
+  }
+}

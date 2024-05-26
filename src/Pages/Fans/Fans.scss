@@ -1,0 +1,17 @@
+.fansTitle::before {
+  content: attr(data-text);
+  position: absolute;
+  z-index: -1;
+  -webkit-text-stroke: 12px #FCD36B;
+
+  @media screen and (max-width: 991px) {
+    -webkit-text-stroke: 5px #FCD36B;
+  }
+}
+
+.fansName::before {
+  content: attr(data-text);
+  position: absolute;
+  z-index: -1;
+  -webkit-text-stroke: 10px #FCD36B;
+}

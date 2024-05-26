@@ -1,0 +1,1 @@
+export type AppSize = "Mobile" | "Tablet" | "Desktop";
