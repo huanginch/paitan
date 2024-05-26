@@ -8,7 +8,7 @@ Thanks following for the permission to use the images. The copyright of the imag
 感謝以下授權圖片使用，圖片版權皆為繪師所有，僅供網站之呈現並無任何商業用途
 
 * Background Image 背景圖片: [早川希](https://x.com/hayakawa_mare21)
-* Icons 各式小貼圖: [GG0](https://x.com/GOG48058623)
+* Icons 各式小貼圖: [GGO](https://x.com/GOG48058623)
 * Banner, Logo and Character 橫幅、LOGO、角色立繪: [麵音白湯團隊](https://www.youtube.com/@PaitanOfficial)
 
 ## Author 作者
