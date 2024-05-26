@@ -4,6 +4,7 @@ import weiwei from '/src/assets/大尾尾.png';
 import anders from '/src/assets/姆斯.png';
 import derder from '/src/assets/ㄉㄉ.png';
 import endorisa from '/src/assets/遠藤.png';
+import duck from '/src/assets/可達鴨.png';
 
 const staffInfo = [
   {
@@ -22,7 +23,7 @@ const staffInfo = [
     name: 'ㄉㄉ',
     dc: 'derder_tc',
     img: derder,
-    msg: <img className="inline-block mx-auto align-top m-[-10px]" src="/src/assets/可達鴨.png" alt="duck" />
+    msg: <img className="inline-block mx-auto align-top m-[-10px]" src={duck} alt="duck" />
   },
   {
     name: '遠藤',
