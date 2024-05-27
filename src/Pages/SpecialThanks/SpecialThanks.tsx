@@ -40,15 +40,19 @@ function SpecialThanks() {
 
 
   return (
-    <div className="bg-SpecialThanks bg-contain md:bg-none md:bg-white md:rounded-[40px] md:border-[5px] md:border-third md:mx-[100px] w-full md:w-auto h-[331px] md:h-auto pt-[30px] relative z-0 mb-[120px] md:flex md:flex-row-reverse md:items-center">
-      <div className="md:flex-grow">
-        {profiles.map((profile, index) =>
-          <Profile key={`profile-${index}`} text={profile.text} twitter={profile.twitter} icon={profile.icon} />
-        )
-        }
+    <div className="bg-SpecialThanks bg-repeat-x bg-contain bg-center md:bg-none md:bg-white md:rounded-[40px] md:border-[5px] md:border-third md:mx-auto w-full md:w-[85%] lg:w-[70%] h-[331px] md:h-auto pt-[30px] lg:pt-[40px] relative z-0 mb-[120px] md:flex md:flex-row-reverse items-end md:pr-[30px] lg:pr-[80px]">
+      <div className="md:flex-grow ">
+        <ul>
+          {profiles.map((profile, index) =>
+            <li className={index !== profiles.length ? 'mb-[30px] md:mb-[55px]' : 'mb-0'}>
+              <Profile key={`profile-${index}`} text={profile.text} twitter={profile.twitter} icon={profile.icon} />
+            </li>
+          )
+          }
+        </ul>
       </div>
       <p data-text="特別" className="md:hidden special text-white text-[40px] text-center">特別 <span data-text="感謝" className="thanks text-[64px] align-text-top">感謝</span></p>
-      <img className="w-[164px] md:w-[250px] mt-[-90px] md:mt-[100px] relative z-0 md:rounded-bl-[30px]" src={imgUrl} alt="loud" />
+      <img className="w-[164px] md:w-[250px] lg:w-[300px] mt-[-60px] relative z-0 md:rounded-bl-[30px]" src={imgUrl} alt="loud" />
     </div>
   )
 }
