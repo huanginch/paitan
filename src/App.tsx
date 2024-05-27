@@ -1,8 +1,12 @@
+import { useState, useEffect, useContext } from "react";
+
 import Navbar from "./Components/Navbar";
 import Title from "./Components/Title";
 import SubtitleL from "./Components/Subtitle/SubtitleL";
 import SubtitleR from "./Components/Subtitle/SubtitleR";
-// import Loading from "./Components/Loading";
+import Loading from "./Components/Loading";
+import Footer from "./Components/Footer";
+import Opening from "./Components/Opening";
 
 import Banner from "./Pages/Banner";
 import Artist from "./Pages/Artist";
@@ -11,33 +15,43 @@ import SpecialThanks from "./Pages/SpecialThanks";
 import Fans from "./Pages/Fans";
 import Clips from "./Pages/Clips";
 import Media from "./Pages/Media";
-
-import background from "./assets/bg-pc.png";
-import { useState, useEffect, useContext } from "react";
-import { useAnimate } from "framer-motion";
-import DataContext from "./stores/Context";
 import Rules from "./Pages/Rules";
 import Donate from "./Pages/Donate";
-import Footer from "./Components/Footer";
 
+import { useAnimate } from "framer-motion";
+import DataContext from "./stores/Context";
+
+import background from "/src/assets/bg-pc.png";
 import actor from "/src/assets/actor.png";
 import staff from "/src/assets/staff.png";
-import Opening from "./Components/Opening";
 
 function App() {
 
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [showOpening, setShowOpening] = useState(true);
   const [ navbar, animateNavbar ] = useAnimate();
   const { appSize, setAppSize } = useContext(DataContext);
 
-  
-  useEffect(() => {
+  const cacheImages = async (srcArray: string[]): Promise<void> => {
+    const promises = srcArray.map((src) => {
+      return new Promise<void>((resolve, reject) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => resolve();
+        img.onerror = () => reject();
+      });
+    });
+    await Promise.all(promises);
+    setIsLoading(false);
     setShowOpening(true);
+  };
+
+  useEffect(() => {
+    cacheImages([background, actor, staff]);
 
     setTimeout(() => {
       setShowOpening(false);
-    }, 2500);
+    }, 3000);
 
   }, []);
 
@@ -77,11 +91,12 @@ function App() {
   }, [animateNavbar, appSize, navbar, showOpening]);
 
   {
-    if (showOpening) {
-      return (<Opening isLoading={showOpening} />)
+    if (isLoading) {
+      return (<Loading isLoading={isLoading} />)
     } else {
       return (
         <div>
+          <Opening isLoading={showOpening} />
           <div className="overflow-hidden" style={{
             backgroundImage: `url(${background})`,
           }}>
