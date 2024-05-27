@@ -24,6 +24,10 @@ import DataContext from "./stores/Context";
 import background from "/src/assets/bg-pc.png";
 import actor from "/src/assets/actor.png";
 import staff from "/src/assets/staff.png";
+import welcom from '/src/assets/歡迎光臨麵屋.png';
+import welcomMobile from '/src/assets/歡迎光臨麵屋-Mobile.png';
+import logoImg from '/src/assets/LOGO-01.png';
+import paitanBanner from '/src/assets/paitan_banner.png';
 
 function App() {
 
@@ -46,7 +50,7 @@ function App() {
   };
 
   useEffect(() => {
-    cacheImages([background, actor, staff]);
+    cacheImages([background, welcom, welcomMobile, logoImg, paitanBanner]);
     setShowOpening(true);
 
     setTimeout(() => {
