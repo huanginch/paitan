@@ -101,7 +101,7 @@ function App() {
     } else {
       return (
         <div>
-          <Opening isLoading={showOpening} />
+          <Opening img={opening} isLoading={showOpening} />
           <div className="overflow-hidden" style={{
             backgroundImage: `url(${background})`,
           }}>
