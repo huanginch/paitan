@@ -21,7 +21,7 @@ import Donate from "./Pages/Donate";
 import { useAnimate } from "framer-motion";
 import DataContext from "./stores/Context";
 
-import background from "/src/assets/bg-pc.png";
+import background from "/src/assets/bg-small.png";
 import actor from "/src/assets/actor.png";
 import staff from "/src/assets/staff.png"; 
 import welcom from '/src/assets/歡迎光臨麵屋.png';
