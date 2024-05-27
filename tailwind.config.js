@@ -9,7 +9,7 @@ export default {
       boxShadow: {
         'button': '4px 5px 7px 1px rgba(192, 150, 43, 1)',
         'subtitle': '6px 10px 10px rgba(255, 184, 0, 0.56)',
-        'icon': '1px 2px 14px 14px rgba(255, 184, 0, 0.54)'
+        'icon': '1px 2px 5px 3px rgba(255, 184, 0, 0.54)'
       },
       dropShadow: {
         'title': '7px 2px 2px rgba(255, 184, 0, 0.72)',
