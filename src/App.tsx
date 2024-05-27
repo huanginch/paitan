@@ -43,11 +43,11 @@ function App() {
     });
     await Promise.all(promises);
     setIsLoading(false);
-    setShowOpening(true);
   };
 
   useEffect(() => {
     cacheImages([background, actor, staff]);
+    setShowOpening(true);
 
     setTimeout(() => {
       setShowOpening(false);
