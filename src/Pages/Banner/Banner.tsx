@@ -34,7 +34,7 @@ function Banner() {
   }, [animateLogo, animatePaitan, animateWelcome, appSize, logo, paitan, welcome]);
 
   return (
-    <div className="relative w-full h-[calc(100vh-82px)]">
+    <div className="relative w-full md:h-[calc(100vh-40px)] h-[calc(100vh-100px)]">
       <img
         ref={welcome}
         className="absolute w-[100%] md:w-[70%] tablet:w-[50%] z-10 top-0 md:top-[10%] tablet:left-[20%] -translate-x-50 -translate-y-50"

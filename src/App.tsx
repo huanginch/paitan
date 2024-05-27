@@ -22,17 +22,27 @@ import Footer from "./Components/Footer";
 
 import actor from "/src/assets/actor.png";
 import staff from "/src/assets/staff.png";
+import Opening from "./Components/Opening";
 
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
+  const [showOpening, setShowOpening] = useState(true);
   const [ navbar, animateNavbar ] = useAnimate();
   const { appSize, setAppSize } = useContext(DataContext);
 
+  
   useEffect(() => {
-    setTimeout(() => {
+    setIsLoading(true);
+    window.onload = function () {
+      window.scrollTo(0, 0);
       setIsLoading(false);
-    }, 2500);
+    }
+
+    setTimeout(() => {
+      setShowOpening(false);
+      setIsLoading(false);
+    }, 3000);
   }, []);
 
   useEffect(() => {
@@ -71,6 +81,7 @@ function App() {
       
       <div>
         <Loading isLoading={isLoading} />
+        <Opening isLoading={showOpening} />
         <div className="overflow-hidden" style={{
           backgroundImage: `url(${background})`,
         }}>
@@ -79,7 +90,7 @@ function App() {
             className="fixed z-[100]">
             <Navbar />
           </div>
-          <section id="banner" className="pt-[80px] mb-[120px]">
+          <section id="banner" className="pt-[45px] mb-[120px]">
             <Banner />
           </section>
           <section id="member-intro" className="mb-[100px]">
