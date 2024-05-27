@@ -28,7 +28,7 @@ import welcom from '/src/assets/歡迎光臨麵屋.png';
 import welcomMobile from '/src/assets/歡迎光臨麵屋-Mobile.png';
 import logoImg from '/src/assets/LOGO-01.png';
 import paitanBanner from '/src/assets/paitan_banner.png';
-import opening from '/src/assets/opening-large.gif';
+import opening from '/src/assets/opening.gif';
 
 function App() {
 
