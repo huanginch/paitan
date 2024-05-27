@@ -8,7 +8,7 @@ import hambar from "/src/assets/hambar.svg"
 import hambarFocus from "/src/assets/hambar-focus.svg"
 
 function Navbar() {
-  const [clickedIdx, setClickedIdx] = useState<number>(20);
+  const [clickedIdx, setClickedIdx] = useState<number>(15);
   const navBarLinks = useRef<HTMLDivElement>(null);
   const [isFocus, setIsFocus] = useState<boolean>(false);
 
@@ -17,7 +17,7 @@ function Navbar() {
       setClickedIdx(15);
       return;
     }
-    
+
     const x = event.currentTarget.getBoundingClientRect().left;
     const midPos = event.currentTarget.getBoundingClientRect().width / 2;
     const pos = x + midPos;
