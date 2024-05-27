@@ -1,4 +1,4 @@
-import opening from '../assets/opening.gif';
+import opening from '../assets/opening-large.gif';
 
 function Opening({isLoading}: {isLoading: boolean}) {
 
