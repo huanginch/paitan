@@ -47,15 +47,17 @@ function App() {
       });
     });
     await Promise.all(promises);
-    setIsLoading(false);
   };
 
   useEffect(() => {
     cacheImages([background, welcom, welcomMobile, logoImg, paitanBanner, opening]);
-    setShowOpening(true);
 
-    setTimeout(() => {
-      setShowOpening(false);
+    setTimeout(async () => {
+      setIsLoading(false);
+      setShowOpening(true);
+      setTimeout(() => {
+        setShowOpening(false);
+      }, 3000);
     }, 3000);
 
   }, []);
