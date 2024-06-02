@@ -7,7 +7,7 @@ import welcomTablet from '/src/assets/歡迎光臨麵屋-tablet.png';
 import welcomMobile from '/src/assets/歡迎光臨麵屋-Mobile.png';
 import logoImg from '/src/assets/LOGO-01.png';
 import paitanBanner from '/src/assets/paitan_banner.png';
-import paitabBannerMobile from '/src/assets/paitan_banner-mobile.png';
+import paitabBannerMobile from '/src/assets/paitan_banner-Mobile.png';
 import woohooUrl from '/src/assets/嗚呼.png';
 
 function Banner() {
