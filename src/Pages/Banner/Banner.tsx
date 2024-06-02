@@ -46,7 +46,7 @@ function Banner() {
   }, [animateLogo, animatePaitan, animateWelcome, appSize, logo, paitan, welcome, woohoo, animateWoohoo]);
 
   return (
-    <div className="flex flex-col items-center justify-stretch md:justify-end lg:justify-end md:relative w-full h-[calc(100vh-100px)] md:h-[calc(100vh-40px)] mb-[35px]">
+    <div className="flex flex-col items-center justify-stretch md:justify-end lg:justify-end md:relative w-full h-[calc(100vh-100px)] md:h-[calc(100vh-180px)] tablet:h-[calc(100vh-40px)] mb-[35px]">
       <img
         ref={welcome}
         className="md:absolute md:w-[100%] tablet:w-[50%] z-10 top-0 md:top-[10%] tablet:left-[15%] -translate-x-50 -translate-y-50"
