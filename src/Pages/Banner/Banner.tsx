@@ -61,9 +61,9 @@ function Banner() {
           alt="Paitan" />
       </div>
       <div
-        ref={logo}
         className="bg-background w-full ">
         <img
+          ref={logo}
           className="w-[200px] xs:w-[70%] md:w-auto md:max-h-[250px] mx-auto md:mx-0 py-2 lg:py-4 lg:pl-[100px]" src={logoImg}
           alt="Logo" />
       </div>
