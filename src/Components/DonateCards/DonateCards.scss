@@ -1,6 +1,7 @@
 .card-name {
   h5 {
-    writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
   }
 }
 

@@ -7,7 +7,7 @@ function DonateCards({ link, img, cardName, text }: { link:string, img: string, 
         <div className="card-name bg-white border-[5px] tablet:border-[13px] border-third rounded-t-[81px] flex-grow">
           <h5 className="text-4xl tablet:text-[64px] leading-[54px] tablet:leading-[120px] text-primary pt-[21px] pb-[5px]">{cardName}</h5>
         </div>
-        <div className="card-bottom h-[29px] tablet:h-[48px] bg-third"></div>
+        <div className="card-bottom w-full h-[29px] tablet:h-[48px] bg-third"></div>
       </div>
       <div className="flex flex-col">
         <img className="w-[132px] h-[132px] mr-[29px] tablet:mr-[58px] tablet:w-[250px] tablet:h-[250px]" src={img} alt={cardName} />
