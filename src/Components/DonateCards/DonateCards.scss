@@ -1,6 +1,7 @@
 .card-name {
-  -webkit-writing-mode: vertical-lr;
-    writing-mode: vertical-lr;
+  h5 {
+    writing-mode: tb-rl;
+  }
 }
 
 .donate-card:active {
