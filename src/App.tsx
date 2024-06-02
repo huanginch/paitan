@@ -25,9 +25,11 @@ import background from "/src/assets/bg-small.png";
 import actor from "/src/assets/actor.png";
 import staff from "/src/assets/staff.png"; 
 import welcom from '/src/assets/歡迎光臨麵屋.png';
+import welcomTablet from '/src/assets/歡迎光臨麵屋-tablet.png';
 import welcomMobile from '/src/assets/歡迎光臨麵屋-Mobile.png';
 import logoImg from '/src/assets/LOGO-01.png';
 import paitanBanner from '/src/assets/paitan_banner.png';
+import paitabBannerMobile from '/src/assets/paitan_banner-Mobile.png';
 import opening from '/src/assets/opening.gif';
 
 function App() {
@@ -50,7 +52,7 @@ function App() {
   };
 
   useEffect(() => {
-    cacheImages([background, welcom, welcomMobile, logoImg, paitanBanner, opening]);
+    cacheImages([background, welcom, welcomTablet, welcomMobile, logoImg, paitanBanner, paitabBannerMobile, opening]);
 
     setTimeout(async () => {
       setIsLoading(false);
@@ -59,6 +61,11 @@ function App() {
         setShowOpening(false);
       }, 3000);
     }, 3000);
+
+    // scroll to top when refresh and loading
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
 
   }, []);
 
