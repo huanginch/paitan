@@ -122,12 +122,12 @@ function App() {
             <section id="banner" className="pt-[45px] mb-[120px]">
               <Banner />
             </section>
-            <section id="member-intro" className="mb-[100px]">
-              <div className="mb-[90px]">
+            <section id="member-intro" className="mb-[48px] md:mb-[80px] lg:mb-[100px]">
+              <div className="mb-[30px] md:mb-[60px] lg:mb-[80px]">
                 <Title text="成員介紹" />
               </div>
               <SubtitleL text="藝人列表" img={actor} />
-              <div className="mb-[150px]">
+              <div className="mb-[40px] lg:mb-[150px]">
                 <Artist />
               </div>
               <SubtitleR text="STAFF列表" img={staff} />
@@ -135,7 +135,7 @@ function App() {
               <SpecialThanks />
               <Fans />
             </section>
-            <section id="clips" className="mb-[160px]">
+            <section id="clips" className="mb-[40px] md:mb-[80px] lg:mb-[160px]">
               <div className="mb-[20px]">
                 <Title text="精華" />
               </div>
@@ -143,13 +143,13 @@ function App() {
                 <Clips />
               </div>
             </section>
-            <section id="media">
-              <div className="mb-[40px]">
+            <section className="mb-[45px] md:mb-[80px] tablet:mb-[180px]" id="media">
+              <div className="mb-[30px]">
                 <Title text="社群連結" />
               </div>
               <Media />
             </section>
-            <section id="rules" className="mb-[40px]">
+            <section id="rules" className="mb-[40px] md:mb-[80px] lg:mb-[120px]">
               <div className="mb-[18px] tablet:mb-[40px]">
                 <Title text="二創規範" />
               </div>

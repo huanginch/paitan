@@ -46,25 +46,25 @@ function Banner() {
   }, [animateLogo, animatePaitan, animateWelcome, appSize, logo, paitan, welcome, woohoo, animateWoohoo]);
 
   return (
-    <div className="flex flex-col items-center justify-stretch md:justify-end lg:justify-end md:relative w-full h-[calc(100vh-100px)] md:h-[calc(100vh-180px)] tablet:h-[calc(100vh-40px)] mb-[35px]">
+    <div className="flex flex-col items-center justify-stretch md:justify-end lg:justify-end md:relative w-full h-[calc(100vh-100px)] md:h-[calc(100vh-60px)] tablet:h-[calc(100vh-180px)] lg:h-[calc(100vh-40px)] mb-[35px]">
       <img
         ref={welcome}
-        className="md:absolute md:w-[100%] tablet:w-[50%] z-10 top-0 md:top-[10%] tablet:left-[15%] -translate-x-50 -translate-y-50"
+        className="mt-2 w-[90%] md:absolute md:w-[90%] air:w-[100%] tabelt:w-[50%] lg:w-[80%] PC:w-[50%] z-10 top-0 lg:top-[10%] PC:top-[10%] md:left-0 air:left-0 tablet:left-[15%] lg:left-0 PC:left-[15%] -translate-x-50 -translate-y-50"
         src={welcomUrl}
         alt="Welcome" />
-      <div className='flex md:flex-row-reverse justify-between items-start md:absolute md:bottom-0 md:right-0 w-full lg:max-w-[1020px]'>
-        <img ref={woohoo} className='md:hidden' src={woohooUrl} alt="嗚呼" />
+      <div className='flex tablet:flex-row-reverse justify-between items-center tablet:absolute tablet:bottom-0 md:right-0 w-full lg:max-w-[1020px]'>
+        <img ref={woohoo} className='tablet:hidden ml-7 md:ml-[80px] pb-[100px] md:pb-0 w-[30%]' src={woohooUrl} alt="嗚呼" />
         <img
           ref={paitan}
           src={paitanBannerUrl}
-          className='object-contain md:object-cover w-[60%] lg:w-[65%]'
+          className='tablet:object-cover w-[60%] lg:w-[65%]'
           alt="Paitan" />
       </div>
       <div
         className="bg-background w-full ">
         <img
           ref={logo}
-          className="w-[200px] xs:w-[70%] md:w-auto md:max-h-[250px] mx-auto md:mx-0 py-2 lg:py-4 lg:pl-[100px]" src={logoImg}
+          className="w-[200px] xs:w-[70%] tablet:w-auto tablet:max-h-[250px] mx-auto tablet:mx-0 py-2 lg:py-4 lg:pl-[100px]" src={logoImg}
           alt="Logo" />
       </div>
     </div>

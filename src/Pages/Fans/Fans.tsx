@@ -5,7 +5,7 @@ import mutan from "/src/assets/母湯頭像.png";
 
 function Fans() {
   return (
-    <div className='tablet:flex tablet:justify-between tablet:items-center mb-[37px] tablet:mb-[127px]'>
+    <div className='tablet:flex tablet:justify-between tablet:items-center'>
       <img className='hidden relative z-[1] tablet:block' src={menon} alt="menon" />
       <h4 data-text="粉絲形象" className="tablet:hidden relative z-0 fansTitle bg-white border-t-4 border-b-4 border-third text-white text-[32px] leading-10 py-1 text-center">粉絲形象</h4>
       <div className='tablet:flex tablet:flex-grow lg:flex-grow-0 tablet:relative tablet:bg-white tablet:rounded-[60px] tablet:border-third tablet:border-8 PC:mx-[117px] tablet:justify-between PC:justify-center tablet:items-center relative z-[1]'>

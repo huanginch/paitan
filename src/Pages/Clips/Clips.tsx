@@ -45,7 +45,7 @@ function Clips() {
       spaceBetween={30}
       slidesPerView={1}
       navigation
-      className='mb-[44px] w-full h-[250px] md:h-[350px] lg:h-[600px] relative overflow-visible'
+      className='w-full h-[250px] md:h-[350px] lg:h-[600px] relative overflow-visible'
     >
       {
         clips.map((clip: Clip, index) => {

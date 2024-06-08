@@ -21,9 +21,9 @@ function Other() {
   const chichiUrl = isMobile ? chichiMobile : chichi;
 
   return (
-    <div className="bg-Artist-Other bg-cover px-2 flex flex-col md:flex-row md:justify-between lg:justify-center content-between md:items-center overflow-hidden">
-      <img className="pl-8 md:mt-[20px] mb-[60px] lg:mb-[200px] md:max-w-[400px] md:max-h-[400px] lg:max-w-[500px] lg:max-h-[500px]" src={menonUrl} alt="menon" />
-      <img className="pr-8 md:mt-[60px] mb-[20px] lg:mt-[200px]  md:max-w-[400px] md:max-h-[400px] lg:max-w-[500px] lg:max-h-[500px]" src={chichiUrl} alt="chichi" />
+    <div className="bg-Artist-Other bg-cover px-2 flex flex-col justify-center md:flex-row md:justify-evenly lg:justify-center content-between items-center overflow-hidden">
+      <img className="md:mt-[20px] mb-[30px] lg:mb-[200px] w-[300px] tablet:w-auto md:max-w-[400px] md:max-h-[400px] PC:max-w-[500px] PC:max-h-[500px]" src={menonUrl} alt="menon" />
+      <img className="md:mt-[60px] mb-[20px] lg:mt-[200px] w-[300px] tablet:w-auto md:max-w-[400px] md:max-h-[400px] PC:max-w-[500px] PC:max-h-[500px]" src={chichiUrl} alt="chichi" />
     </div>
   );
 }

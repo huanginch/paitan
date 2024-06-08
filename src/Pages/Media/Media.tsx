@@ -55,7 +55,7 @@ function Media() {
   }
 
   return (
-    <div className="mb-[45px] tablet:mb-[180px]">
+    <div className="">
       <div className="text-white bg-here bg-center md:bg-here-pc bg-contain bg-no-repeat w-[200px] md:w-[400px] tablet:w-[600px] h-[46px] md:h-[100px] flex items-center justify-center ml-[calc(50%-100px)] md:ml-[calc(50%-200px)] tablet:ml-[calc(50%-250px)] tablet:mb-[-65px]">
         <p className="pr-2 md:pr-10 md:text-[28px] tablet:text-[42px]">主播都在這裡開台辣~</p>
       </div>

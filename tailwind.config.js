@@ -29,6 +29,7 @@ export default {
       },
       screens: {
         'xs': '411px',
+        'air': '820px',
         'tablet': '992px',
         'PC': '1200px',
       },

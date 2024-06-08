@@ -36,7 +36,7 @@ const staffInfo = [
 function Staff() {
   return (
     <>
-      <div className="md:bg-Staff bg-center bg-contain flex flex-col md:flex-row flex-wrap items-center justify-center clear-both">
+      <div className="PC:bg-Staff bg-center bg-contain flex flex-col md:flex-row flex-wrap items-center justify-center clear-both">
         {staffInfo.map((staff, idx) => {
           return (
             <StaffCard

@@ -36,8 +36,8 @@ function Navbar() {
 
 
   return (
-    <nav className="bg-white flex items-center lg:pt-[12px] lg:pb-[22px] pb-[2px] z-50 fixed w-screen">
-      <div onClick={handleClickNavbarLink(true)} className="flex-1">
+    <nav className="bg-white flex items-center justify-between lg:pt-[12px] lg:pb-[22px] pb-[2px] z-50 fixed w-screen">
+      <div onClick={handleClickNavbarLink(true)} className="flex-1 lg:flex-grow-0 PC:flex-grow-1">
         <Logo />
       </div>
       <div className="active:opacity-80 active:bg-secondary focus:bg-secondary bg-primary block lg:hidden">
@@ -46,19 +46,19 @@ function Navbar() {
         </a>
       </div>
       <div ref={navBarLinks} className="transition-all duration-[400ms] ease-linear absolute w-full text-center bottom-10 bg-secondary lg:static lg:bg-white lg:flex lg:items-center lg:justify-between lg:w-auto lg:bottom-0 lg:py-2 lg:pr-4">
-        <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5 relative">
+        <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5 lg:pr-3 relative">
           <NavbarLink text="成員介紹" link="#member-intro"/>
         </div>
-        <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5">
+        <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5 lg:pr-3">
           <NavbarLink text="精華" link="#clips"/>
         </div>
-        <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5">
+        <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5 lg:pr-3">
           <NavbarLink text="社群連結" link="#media"/>
         </div>
-        <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5">
+        <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5 lg:pr-3">
           <NavbarLink text="二創規範" link="#rules"/>
         </div>
-        <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5">
+        <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5 lg:pr-3">
           <NavbarLink text="湯黑俱樂部" link="#donate" />
         </div>
       </div>
