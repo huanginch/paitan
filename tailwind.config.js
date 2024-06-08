@@ -28,7 +28,7 @@ export default {
         'donate-hover': '#7B5900',
       },
       screens: {
-        'xs': '411px',
+        'xs': '390px',
         'air': '820px',
         'tablet': '992px',
         'PC': '1200px',
