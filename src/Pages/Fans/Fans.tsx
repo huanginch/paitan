@@ -8,7 +8,7 @@ function Fans() {
     <div className='tablet:flex tablet:justify-between tablet:items-center mb-[37px] tablet:mb-[127px]'>
       <img className='hidden relative z-[1] tablet:block' src={menon} alt="menon" />
       <h4 data-text="粉絲形象" className="tablet:hidden relative z-0 fansTitle bg-white border-t-4 border-b-4 border-third text-white text-[32px] leading-10 py-1 text-center">粉絲形象</h4>
-      <div className='tablet:flex tablet:flex-grow lg:flex-grow-0 tablet:relative tablet:bg-white tablet:rounded-[60px] tablet:border-third tablet:border-8 tablet:mx-[117px] tablet:justify-between lg:justify-center tablet:items-center relative z-[1]'>
+      <div className='tablet:flex tablet:flex-grow lg:flex-grow-0 tablet:relative tablet:bg-white tablet:rounded-[60px] tablet:border-third tablet:border-8 PC:mx-[117px] tablet:justify-between PC:justify-center tablet:items-center relative z-[1]'>
         <div className='hidden tablet:block bg-third rounded-[60px] w-full h-[62px] absolute top-0 z-0'></div>
         <div className='bg-[rgba(252,211,107,0.44)] bg-Fans bg-no-repeat bg-center tablet:bg-none tablet:bg-transparent relative z-1'>
           <img className="w-[250px] mx-auto pt-[15px] pb-[22px] tablet:pl-[20px] lg:pl-[40px] tablet:pb-0" src={mutan} alt="母湯" />

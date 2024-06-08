@@ -40,7 +40,7 @@ function SpecialThanks() {
 
 
   return (
-    <div className="bg-SpecialThanks bg-repeat-x bg-contain bg-center md:bg-none md:bg-white md:rounded-[40px] md:border-[5px] md:border-third md:mx-auto w-full md:w-[85%] lg:w-[70%] h-[331px] md:h-auto pt-[30px] lg:pt-[40px] relative z-0 mb-[120px] md:flex md:flex-row-reverse items-end md:pr-[30px] lg:pr-[80px]">
+    <div className="bg-SpecialThanks bg-repeat-x bg-contain bg-center md:bg-none md:bg-white md:rounded-[40px] md:border-[5px] md:border-third md:mx-auto w-full md:w-[85%] PC:w-[70%] h-[331px] md:h-auto pt-[30px] PC:pt-[40px] relative z-0 mb-[120px] md:flex md:flex-row-reverse items-end md:pr-[30px] PC:pr-[80px]">
       <div className="md:flex-grow ">
         <ul>
           {profiles.map((profile, index) =>

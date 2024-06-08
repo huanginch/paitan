@@ -30,6 +30,7 @@ export default {
       screens: {
         'xs': '411px',
         'tablet': '992px',
+        'PC': '1200px',
       },
       backgroundImage: {
         'Artist-Other': "url('/src/assets/background.png')",
