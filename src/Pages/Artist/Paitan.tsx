@@ -4,8 +4,8 @@ import paitanIntro from "/src/assets/Paitan_Intro.png";
 
 function Paitan() {
   return (
-    <div className="text-[#727171] text-[12px] md:text-[20px] lg:text-[24px] bg-background border-t-8 border-b-8 border-third md:pl-10 PC:pl-52 relative mb-[35px] md:mb-[70px] flex flex-col items-center self-center  md:block">
-      <img src={paitanIntro} className="absolute bottom-full md:right-0 md:bottom-0 w-[100%] xs:w-[83%]" alt="paitan" />
+    <div className="text-[#727171] text-[12px] md:text-[20px] lg:text-[24px] bg-background border-t-8 border-b-8 border-third md:pl-10 PC:pl-52 relative mb-[35px] md:mb-[70px] flex flex-col items-center self-center md:block">
+      <img src={paitanIntro} className="absolute bottom-full md:right-0 md:bottom-0 w-[100%] xs:w-[83%] md:w-[50%]" alt="paitan" />
      <div>
         <p className="pt-[58px] md:pt-[35px] pb-[38px]">
           嗚呼──！！大家好我是白湯！！<br />每天督促自己不要亂ㄘ毒的個人勢VTUBER
