@@ -15,7 +15,7 @@ function Fans() {
         </div>
         <div className='px-4 relative z-0 fansTitle bg-white tablet:bg-transparent border-t-4 border-b-4 border-third tablet:border-0 text-white tablet:pb-[20px]'>
           <h4 data-text="粉絲形象" className="hidden tablet:block relative z-0 fansTitle text-white text-[32px] leading-10 lg:text-[48px] lg:leading-[60px] py-1 text-center tablet:mt-[12px] mb-[18px] lg:tracking-[20px]">粉絲形象</h4>
-          <p className='text-[32px] leading-10 text-[rgba(0,0,0,0.3)] mt-4 tablet:mt-0 tablet:mb-2'>麵音好可愛</p>
+          <p className='text-[32px] leading-10 text-[rgba(0,0,0,0.3)] mt-4 tablet:mt-0 tablet:mb-2'>麺音好可愛</p>
           <p data-text="- - 母湯" className='fansName text-right text-[40px] leading-[57px] lg:text-[60px]'>- - 母湯</p>
         </div>
       </div>
