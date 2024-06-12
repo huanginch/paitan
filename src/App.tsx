@@ -31,6 +31,7 @@ import logoImg from '/src/assets/LOGO-01.png';
 import paitanBanner from '/src/assets/paitan_banner.png';
 import paitabBannerMobile from '/src/assets/paitan_banner-Mobile.png';
 import opening from '/src/assets/opening.gif';
+import openingMobile from '/src/assets/opening-mobile.gif';
 
 function App() {
 
@@ -52,7 +53,17 @@ function App() {
   };
 
   useEffect(() => {
-    cacheImages([background, welcom, welcomTablet, welcomMobile, logoImg, paitanBanner, paitabBannerMobile, opening]);
+    let images = [];
+    if(appSize === "Mobile") {
+      images = [welcomMobile, paitabBannerMobile, openingMobile];
+    } else if(appSize === "Tablet") {
+      images = [welcomTablet, paitanBanner, opening];
+    } else {
+      images = [welcom, paitanBanner, opening];
+    }
+    images.push(background, logoImg);
+
+    cacheImages(images);
 
     setTimeout(async () => {
       setIsLoading(false);
@@ -67,6 +78,7 @@ function App() {
       window.scrollTo(0, 0);
     }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -97,9 +109,9 @@ function App() {
     }
 
     if (appSize === "Mobile" || appSize === "Tablet") {
-      animateNavbar(navbar.current, { opacity: [0, 1] }, { ease: "easeInOut", duration: 1.5, delay: 3.5 });
+      animateNavbar(navbar.current, { opacity: [0, 1] }, { ease: "easeInOut", duration: 1.5, delay: 2.5 });
     } else {
-      animateNavbar(navbar.current, { opacity: [0, 1] }, { ease: "easeInOut", duration: 1.5, delay: 6 });
+      animateNavbar(navbar.current, { opacity: [0, 1] }, { ease: "easeInOut", duration: 1.5, delay: 4.5 });
     }
     
   }, [animateNavbar, appSize, navbar, showOpening]);
@@ -110,7 +122,7 @@ function App() {
     } else {
       return (
         <div>
-          <Opening img={opening} isLoading={showOpening} />
+          <Opening img={appSize === 'Mobile' ? openingMobile : opening} isLoading={showOpening} />
           <div className="overflow-hidden" style={{
             backgroundImage: `url(${background})`,
           }}>
