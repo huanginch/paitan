@@ -70,7 +70,7 @@ function App() {
       setShowOpening(true);
       setTimeout(() => {
         setShowOpening(false);
-      }, 3000);
+      }, 2800);
     }, 3000);
 
     // scroll to top when refresh and loading

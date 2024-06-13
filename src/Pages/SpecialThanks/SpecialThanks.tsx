@@ -44,8 +44,8 @@ function SpecialThanks() {
       <div className="md:flex-grow ">
         <ul>
           {profiles.map((profile, index) =>
-            <li className={index !== profiles.length ? 'mb-[30px] md:mb-[55px]' : 'mb-0'}>
-              <Profile key={`profile-${index}`} text={profile.text} twitter={profile.twitter} icon={profile.icon} />
+            <li key={`profile-${index}`} className={index !== profiles.length ? 'mb-[30px] md:mb-[55px]' : 'mb-0'}>
+              <Profile text={profile.text} twitter={profile.twitter} icon={profile.icon} />
             </li>
           )
           }
