@@ -53,15 +53,7 @@ function App() {
   };
 
   useEffect(() => {
-    let images = [];
-    if(appSize === "Mobile") {
-      images = [welcomMobile, paitabBannerMobile, openingMobile];
-    } else if(appSize === "Tablet") {
-      images = [welcomTablet, paitanBanner, opening];
-    } else {
-      images = [welcom, paitanBanner, opening];
-    }
-    images.push(background, logoImg);
+    const images = [welcomMobile, paitabBannerMobile, openingMobile, welcomTablet, paitanBanner, opening, welcom, background, logoImg];
 
     cacheImages(images);
 
