@@ -8,6 +8,55 @@ import 'swiper/css';
 import 'swiper/scss/navigation';
 import './customNavigation.scss';
 
+//if the token is expired, use the backupClips
+const backupClips: Clip[] = [
+  {
+    contentDetails: {
+      videoId: "DsNj9KOTlAA?si=5MQ7ZpfxA1KC2x-O",
+      startAt: "0",
+      endAt: "0",
+      note: "backup clip",
+      videoPublishedAt: "2021-12-21T09:00:00Z"
+    }
+  },
+  {
+    contentDetails: {
+      videoId: "RWOblHP62T4?si=WA__aEE0WxcnHfxp",
+      startAt: "0",
+      endAt: "0",
+      note: "backup clip",
+      videoPublishedAt: "2021-12-21T09:00:00Z"
+    }
+  },
+  {
+    contentDetails: {
+      videoId: "9PyR7XSsPYA?si=Smvlq3_wfcmDHqp8",
+      startAt: "0",
+      endAt: "0",
+      note: "backup clip",
+      videoPublishedAt: "2021-12-21T09:00:00Z"
+    }
+  },
+  {
+    contentDetails: {
+      videoId: "RSOtesoCb1A?si=qcwDU8RccmAKFkNT",
+      startAt: "0",
+      endAt: "0",
+      note: "backup clip",
+      videoPublishedAt: "2021-12-21T09:00:00Z"
+    }
+  },
+  {
+    contentDetails: {
+      videoId: "vi9Ezq0aFy4?si=lAKnLjn6xJFnRG0Q",
+      startAt: "0",
+      endAt: "0",
+      note: "backup clip",
+      videoPublishedAt: "2021-12-21T09:00:00Z"
+    }
+  }
+]
+
 //document: https://developers.google.com/youtube/v3/docs/playlistItems?hl=zh-tw#resource
 type Clip = {
   contentDetails: {
@@ -38,6 +87,13 @@ function Clips() {
   useEffect(() => {
     getClips();
   }, []);
+
+  //if the token is expired, use the backupClips
+  useEffect(() => {
+    if (clips.length === 0) {
+      setClips(backupClips);
+    }
+  }, [clips]);
 
   return (
     <Swiper

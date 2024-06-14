@@ -50,7 +50,7 @@ function Navbar() {
           <NavbarLink text="成員介紹" link="#member-intro"/>
         </div>
         <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5 lg:pr-3">
-          <NavbarLink text="精華" link="#clips"/>
+          <NavbarLink text="精華/Cover" link="#clips"/>
         </div>
         <div onClick={handleClickNavbarLink(false)} className="py-2 lg:py-0 pr-5 lg:pr-3">
           <NavbarLink text="社群連結" link="#media"/>

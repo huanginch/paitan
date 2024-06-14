@@ -141,7 +141,7 @@ function App() {
             </section>
             <section id="clips" className="mb-[40px] md:mb-[80px] lg:mb-[160px]">
               <div className="mb-[20px]">
-                <Title text="精華" />
+                <Title text="精華 / Cover" />
               </div>
               <div className="px-5">
                 <Clips />
