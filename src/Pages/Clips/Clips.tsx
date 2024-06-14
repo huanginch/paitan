@@ -74,14 +74,35 @@ function Clips() {
 
   //get clips from youtube api
   const getClips = async () => {
-    const res = await axios.get('https://www.googleapis.com/youtube/v3/playlistItems', {
+    const tmp = [];
+    const res1 = await axios.get('https://www.googleapis.com/youtube/v3/playlistItems', {
       params: {
         part: 'contentDetails',
         playlistId: "PLE0_hgc9uxD045UhzlgotyUXFNWhriuPh", //官方好料播放清單ID
         key: process.env.YOUTUBE_API_KEY
       }
     });
-    setClips(res.data.items);
+    tmp.push(...res1.data.items);
+
+    //get covers from cover playlist
+    const res2 = await axios.get('https://www.googleapis.com/youtube/v3/playlistItems', {
+      params: {
+        part: 'contentDetails',
+        playlistId: "PLE0_hgc9uxD3ZK5VHrqrUXEhV6rKSXoBd", //Cover播放清單ID
+        key: process.env.YOUTUBE_API_KEY
+      }
+    });
+    tmp.push(...res2.data.items);
+    
+    //sort the clips by videoPublishedAt
+    tmp.sort((a: Clip, b: Clip) => {
+      return new Date(b.contentDetails.videoPublishedAt).getTime() - new Date(a.contentDetails.videoPublishedAt).getTime();
+    });
+
+    //get the latest 5 clips
+    tmp.splice(5);
+
+    setClips(tmp);
   }
 
   useEffect(() => {
