@@ -1,10 +1,38 @@
 import './DonateCards.scss';
 
+// function iOS() {
+//   return [
+//     'iPad Simulator',
+//     'iPhone Simulator',
+//     'iPod Simulator',
+//     'iPad',
+//     'iPhone',
+//     'iPod'
+//   ].includes(navigator.platform)
+//     // iPad on iOS 13 detection
+//     || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+// }
+
 function DonateCards({ link, img, cardName, text }: { link:string, img: string, cardName: string, text: string }) {
+
+  // const [isiOS, setIsiOS] = useState(false);
+  // // const style = {
+  // //   lineHeight: isiOS ? '68px' : '38px',
+  // //   fontSize: isiOS ? '64px' : '28px',
+  // //   paddingTop: isiOS ? '68px' : '38px',
+  // //   paddingBottom: isiOS ? '68px' : '38px',
+  // //   paddingRight: isiOS ? '68px' : '38px',
+  // // }
+
+  // if (iOS()) {
+  //   //make the cardname line height bigger for iOS
+  //   setIsiOS(true);
+  // }
+
   return (
     <a target="_blank" href={link} className="donate-card flex hover:opacity-50 transition-all duration-500 ease-in-out mx-auto mb-[36px] md:mb-[80px] tablet:mb-[123px]">
       <div className="w-[65px] md:w-[63px] lg:w-[145px] h-full flex flex-col items-center justify-center">
-        <h5 className="w-[65px] md:w-[63px] lg:w-[145px] card-name bg-white border-[5px] tablet:border-[13px] border-third rounded-t-[81px] flex-grow flex flex-col justify-center text-4xl leading-tight tablet:text-[64px] tablet:leading-[68px] text-primary pt-[21px] pb-[5px]">{cardName}</h5>
+        <h5 className="w-[65px] md:w-[63px] lg:w-[145px] card-name bg-white border-[5px] tablet:border-[13px] border-third rounded-t-[81px] flex-grow text-4xl leading-[0px] tablet:text-[64px] tablet:leading-[68px] text-primary pt-[21px] pb-[5px] pr-[26px]">{cardName}</h5>
         <div className="card-bottom w-[65px] md:w-[63px] lg:w-[145px] h-[29px] tablet:h-[48px] bg-third"></div>
       </div>
       <div className="flex flex-col">
