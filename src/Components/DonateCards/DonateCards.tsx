@@ -33,7 +33,7 @@ function DonateCards({ link, img, cardName, text }: { link:string, img: string, 
     <a target="_blank" href={link} className="donate-card flex hover:opacity-50 transition-all duration-500 ease-in-out mx-auto mb-[36px] md:mb-[80px] tablet:mb-[123px]">
       <div className="w-[65px] md:w-[63px] lg:w-[145px] h-full flex flex-col items-center justify-center">
         <div className='w-[65px] md:w-[63px] lg:w-[145px] flex-grow card-name bg-white border-[5px] tablet:border-[13px] border-third rounded-t-[81px] relative'>
-          <p className="absolute text-4xl tablet:leading-[68px] tablet:text-[64px] text-primary pt-[21px] pb-[5px] left-[15%] lg:left-[23%]">{cardName}</p>
+          <p className="absolute text-4xl tablet:leading-[68px] tablet:text-[64px] text-primary pt-[21px] pb-[5px] left-[15%] md:left-[-20%] lg:left-[23%]">{cardName}</p>
         </div>
         <div className="card-bottom w-[65px] md:w-[63px] lg:w-[145px] h-[29px] tablet:h-[48px] bg-third"></div>
       </div>
