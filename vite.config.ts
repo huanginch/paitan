@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
     define: {
       'process.env.YOUTUBE_API_KEY': JSON.stringify(env.YOUTUBE_API_KEY)
     },
-    plugins: [react(), svgr(), Sitemap()],
+    plugins: [react(), svgr(), Sitemap({hostname: 'https://inthuang.tw/paitan'})],
     base: process.env.NODE_ENV === 'production' ? '/paitan/' : '/',
   }
 })
