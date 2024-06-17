@@ -3,6 +3,16 @@
   writing-mode: vertical-rl;
 }
 
+.apple-device {
+  .card-name {
+   line-height: 200px;
+
+   @media (max-width: 768px) {
+     line-height: 100px;
+   }
+  }
+}
+
 .donate-card:active {
   opacity: 1;
   
