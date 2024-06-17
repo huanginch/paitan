@@ -7,7 +7,7 @@
   p {
    line-height: 200px;
 
-   @media (min-width: 768px) {
+   @media (max-width: 992px) {
      line-height: 100px;
    }
   }
