@@ -6,6 +6,8 @@ import perspective2 from "/src/assets/三視圖.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 
+import './Perspective.scss'
+
 const imgs = [perspective1, perspective2];
 
 function Perspective() {
@@ -25,16 +27,16 @@ function Perspective() {
   return (
     <Swiper
       modules={[Navigation]}
-      spaceBetween={30}
+      spaceBetween={10}
       slidesPerView={1}
       navigation
-      className='w-full relative overflow-visible mb-[35px] mx-4'
+      className='w-[95%] overflow-visible mb-[35px] mx-auto'
     >
       {
         imgs.map((img, index) => {
           return (
-            <SwiperSlide key={index} className='w-full'>
-              <img className="PC:w-[80%] PC:mx-auto" onClick={handleImg} src={img} alt="perspective" />
+            <SwiperSlide key={index} className='w-full flex items-center align-middle h-full'>
+              <img className="w-[80%] mx-auto block" onClick={handleImg} src={img} alt="perspective" />
             </SwiperSlide>
           );
         })
