@@ -11,60 +11,72 @@ import './customNavigation.scss';
 //if the token is expired, use the backupClips
 const backupClips: Clip[] = [
   {
+    snippet: {
+      publishedAt: "2021-12-21T09:00:00Z"
+    },
+    status: {
+      privacyStatus: "public"
+    },
+    contentDetails: {
+      videoId: "1YOBieGXos8?si=lLKEAMxtkAWJtaoD",
+    }
+  },
+  {
+    snippet: {
+      publishedAt: "2021-12-21T09:00:00Z"
+    },
     status: {
       privacyStatus: "public"
     },
     contentDetails: {
       videoId: "DsNj9KOTlAA?si=5MQ7ZpfxA1KC2x-O",
-      videoPublishedAt: "2021-12-21T09:00:00Z"
     }
   },
   {
+    snippet: {
+      publishedAt: "2021-12-21T09:00:00Z"
+    },
     status: {
       privacyStatus: "public"
     },
     contentDetails: {
       videoId: "RWOblHP62T4?si=WA__aEE0WxcnHfxp",
-      videoPublishedAt: "2021-12-21T09:00:00Z"
     }
   },
   {
+    snippet: {
+      publishedAt: "2021-12-21T09:00:00Z"
+    },
     status: {
       privacyStatus: "public"
     },
     contentDetails: {
       videoId: "9PyR7XSsPYA?si=Smvlq3_wfcmDHqp8",
-      videoPublishedAt: "2021-12-21T09:00:00Z"
     }
   },
   {
-    status: {
-      privacyStatus: "public"
+    snippet: {
+      publishedAt: "2021-12-21T09:00:00Z"
     },
-    contentDetails: {
-      videoId: "RSOtesoCb1A?si=qcwDU8RccmAKFkNT",
-      videoPublishedAt: "2021-12-21T09:00:00Z"
-    }
-  },
-  {
     status: {
       privacyStatus: "public"
     },
     contentDetails: {
       videoId: "vi9Ezq0aFy4?si=lAKnLjn6xJFnRG0Q",
-      videoPublishedAt: "2021-12-21T09:00:00Z"
     }
   }
 ]
 
 //document: https://developers.google.com/youtube/v3/docs/playlistItems?hl=zh-tw#resource
 type Clip = {
+  snippet: {
+    publishedAt: string;
+  },
   status: {
     privacyStatus: string;
   },
   contentDetails: {
     videoId: string;
-    videoPublishedAt: string;
   };
 }; 
 
@@ -77,7 +89,7 @@ function Clips() {
     const tmp = [];
     const res1 = await axios.get('https://www.googleapis.com/youtube/v3/playlistItems', {
       params: {
-        part: 'contentDetails, status',
+        part: 'snippet,contentDetails, status',
         playlistId: "PLE0_hgc9uxD045UhzlgotyUXFNWhriuPh", //官方好料播放清單ID
         key: process.env.YOUTUBE_API_KEY
       }
@@ -87,8 +99,9 @@ function Clips() {
     //get covers from cover playlist
     const res2 = await axios.get('https://www.googleapis.com/youtube/v3/playlistItems', {
       params: {
-        part: 'contentDetails, status',
+        part: 'snippet,contentDetails, status',
         playlistId: "PLE0_hgc9uxD3ZK5VHrqrUXEhV6rKSXoBd", //Cover播放清單ID
+        maxResults: 10,
         key: process.env.YOUTUBE_API_KEY
       }
     });
@@ -103,7 +116,7 @@ function Clips() {
     
     //sort the clips by videoPublishedAt
     tmp.sort((a: Clip, b: Clip) => {
-      return new Date(b.contentDetails.videoPublishedAt).getTime() - new Date(a.contentDetails.videoPublishedAt).getTime();
+      return new Date(b.snippet.publishedAt).getTime() - new Date(a.snippet.publishedAt).getTime();
     });
 
     //get the latest 5 clips
