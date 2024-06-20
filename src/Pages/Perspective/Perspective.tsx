@@ -4,7 +4,7 @@ import Modal from "../../Components/Modal";
 import perspective1 from "/src/assets/三視圖-new.png";
 import perspective2 from "/src/assets/三視圖.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 import './Perspective.scss'
 
@@ -26,10 +26,11 @@ function Perspective() {
 
   return (
     <Swiper
-      modules={[Navigation]}
+      modules={[Navigation, Autoplay]}
       spaceBetween={10}
       slidesPerView={1}
       navigation
+      autoplay={{ delay: 5000 }}
       className='w-[95%] overflow-visible mb-[35px] mx-auto'
     >
       {
